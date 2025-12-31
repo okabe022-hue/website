@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Latihan - Data Nilai Mahasiswa</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <h1>LATIHAN</h1>
+
+    <fieldset>
+        <legend><strong>DATA NILAI MAHASISWA</strong></legend>
+
+        <label>NIM</label><br>
+        <input type="text" id="nim"><br><br>
+
+        <label>Nama Mahasiswa</label><br>
+        <input type="text" id="nama"><br><br>
+
+        <label>Nilai UTS</label><br>
+        <input type="number" id="uts"><br><br>
+
+        <label>Nilai UAS</label><br>
+        <input type="number" id="uas"><br><br>
+
+        <label>Nilai Tugas</label><br>
+        <input type="number" id="tugas"><br><br>
+
+        <button onclick="prosesData()">Proses</button>
+        <button onclick="resetData()">Batal</button>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <legend><strong>DATA NILAI MAHASISWA</strong></legend>
+
+        <p>NIM : <span id="outNim"></span></p>
+        <p>Nama Mahasiswa : <span id="outNama"></span></p>
+        <p>Nilai UTS : <span id="outUTS"></span></p>
+        <p>Nilai UAS : <span id="outUAS"></span></p>
+        <p>Nilai Tugas : <span id="outTugas"></span></p>
+        <p><strong>Index : <span id="outIndex"></span></strong></p>
+    </fieldset>
+
+    <br>
+
+    <p>
+        UTS 30% | UAS 40% | TUGAS 30% <br>
+        85–100 = A | 70–84 = B | 60–69 = C | 40–59 = D | &lt; 40 = E
+    </p>
+
+    <script>
+        function prosesData() {
+            let nim = document.getElementById("nim").value;
+            let nama = document.getElementById("nama").value;
+            let uts = parseFloat(document.getElementById("uts").value);
+            let uas = parseFloat(document.getElementById("uas").value);
+            let tugas = parseFloat(document.getElementById("tugas").value);
+
+            let nilaiAkhir = (uts * 0.3) + (uas * 0.4) + (tugas * 0.3);
+            let index;
+
+            if (nilaiAkhir >= 85) {
+                index = "A";
+            } else if (nilaiAkhir >= 70) {
+                index = "B";
+            } else if (nilaiAkhir >= 60) {
+                index = "C";
+            } else if (nilaiAkhir >= 40) {
+                index = "D";
+            } else {
+                index = "E";
+            }
+
+            document.getElementById("outNim").innerText = nim;
+            document.getElementById("outNama").innerText = nama;
+            document.getElementById("outUTS").innerText = uts;
+            document.getElementById("outUAS").innerText = uas;
+            document.getElementById("outTugas").innerText = tugas;
+            document.getElementById("outIndex").innerText = index;
+        }
+
+        function resetData() {
+            document.getElementById("nim").value = "";
+            document.getElementById("nama").value = "";
+            document.getElementById("uts").value = "";
+            document.getElementById("uas").value = "";
+            document.getElementById("tugas").value = "";
+
+            document.getElementById("outNim").innerText = "";
+            document.getElementById("outNama").innerText = "";
+            document.getElementById("outUTS").innerText = "";
+            document.getElementById("outUAS").innerText = "";
+            document.getElementById("outTugas").innerText = "";
+            document.getElementById("outIndex").innerText = "";
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+
+    body {
+        background-color: #0f2e2a;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #ffffff;
+        margin: 0;
+        padding: 30px;
+    }
+
+    h1 {
+        text-align: center;
+        color: #42f5da;
+        letter-spacing: 2px;
+    }
+
+    fieldset {
+        border: 2px dashed #42f5da;
+        padding: 20px 30px;
+        margin-bottom: 25px;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    legend {
+        color: #42f5da;
+        padding: 0 10px;
+        font-weight: bold;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        color: #42f5da;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+        width: 300px;
+        padding: 8px;
+        background-color: #1b3f3a;
+        border: 1px solid #42f5da;
+        color: #ffffff;
+        outline: none;
+    }
+
+    input[type="text"]:focus,
+    input[type="number"]:focus {
+        border-color: #ffffff;
+    }
+
+    button {
+        padding: 8px 20px;
+        margin-right: 10px;
+        background-color: transparent;
+        border: 1px solid #42f5da;
+        color: #42f5da;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    button:hover {
+        background-color: #42f5da;
+        color: #0f2e2a;
+    }
+
+    p {
+        margin: 6px 0;
+    }
+
+    span {
+        color: #42f5da;
+        font-weight: bold;
+    }
+
+    .keterangan {
+        font-size: 13px;
+        color: #bdfdf4;
+        margin-top: 10px;
+    }
